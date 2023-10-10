@@ -18,14 +18,14 @@ pipeline{
             steps{
                 dir('spring-app'){
                     sh "mvn clean install "
-                    sh " sudo docker build -t spring-app  ."
+                    sh " sudo -S docker build  -t spring-app  ."
                 }
             }
         }
         stage ("Run docker compose"){
             steps{
                 dir("spring-app"){
-                    sh " sudo docker compose up"
+                    sh " sudo -S docker  compose up"
                 }
             }
         }
