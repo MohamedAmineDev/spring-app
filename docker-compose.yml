@@ -1,0 +1,6 @@
+version: "3"
+services:
+  sprint-boot-app:
+    image: spring-app
+    ports:
+      - "0.0.0.0:8084:8084"
